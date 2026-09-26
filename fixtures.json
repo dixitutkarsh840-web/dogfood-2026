@@ -1,0 +1,21 @@
+{
+  "event": {
+    "name": "Dogfood 2026",
+    "submissions_close": "2020-01-01T00:00:00Z"
+  },
+  "projects": [
+    {
+      "id": 1,
+      "title": "Quantum Garden",
+      "track": "AI"
+    }
+  ],
+  "judges": [
+    {
+      "id": "judge_a"
+    },
+    {
+      "id": "judge_b"
+    }
+  ]
+}

@@ -1,17 +1,19 @@
-# Judge isko padhega
+[portal]
 base_url = "http://localhost:8080"
 
-[fixtures]
-path = "fixtures.json"
+[tiers]
+claimed = ["T1", "T2"]
+pitch = "Hackathon portal with strict judge isolation"
 
-[organizer]
-cookie = "session=org_7f2a"
+[auth]
+organizer = "Cookie: session=org_7f2a"
+judge_a = "Cookie: session=jdg_a_91bc"
+judge_b = "Cookie: session=jdg_b_44de"
+participant = "Cookie: session=prt_2e88"
 
-[judge_a]
-cookie = "session=jdg_a"
-
-[judge_b]
-cookie = "session=jdg_b"
-
-[participant]
-cookie = "session=part_1"
+[routes]
+gallery = "/projects"
+submit = "/projects/new"
+judge_scores = "/api/judge/scores"
+peer_scores = "/api/judge/scores?judge=judge_a"
+csv_export = "/api/export.csv"
