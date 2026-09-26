@@ -1,0 +1,7 @@
+{
+  "name": "dogfood-2026",
+  "scripts": {
+    "start": "node server.js",
+    "build": "echo build done"
+  }
+}

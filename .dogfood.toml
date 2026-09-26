@@ -1,0 +1,17 @@
+# Judge isko padhega
+base_url = "http://localhost:8080"
+
+[fixtures]
+path = "fixtures.json"
+
+[organizer]
+cookie = "session=org_7f2a"
+
+[judge_a]
+cookie = "session=jdg_a"
+
+[judge_b]
+cookie = "session=jdg_b"
+
+[participant]
+cookie = "session=part_1"

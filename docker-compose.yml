@@ -1,0 +1,26 @@
+services:
+  db:
+    image: postgres:15-alpine
+    environment:
+      POSTGRES_USER: dogfood
+      POSTGRES_PASSWORD: dogfood
+      POSTGRES_DB: dogfood
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "8080:3000"
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgresql://dogfood:dogfood@db:5432/dogfood
+      PORT: 3000
+
+volumes:
+  pgdata:
